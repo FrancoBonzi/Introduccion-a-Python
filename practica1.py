@@ -21,13 +21,14 @@ while cantidadDeIntentos < maximoDeIntentos and not numeroEncontrado:
             print(f"Adivinaste el número secreto en el intento {cantidadDeIntentos}")
             numeroEncontrado = True
         elif numero < numero_secreto:
-            print("El número secreto es MAYOR.")
+            print(f"El número secreto es MAYOR.")
         else:
-            print("El número secreto es MENOR.")
+            print(f"El número secreto es MENOR.")
 
-        print("Intentos restantes:", maximoDeIntentos - cantidadDeIntentos)
-        print() 
+        if not numeroEncontrado:
+            print(f"Intentos restantes: {maximoDeIntentos-cantidadDeIntentos} ")
 
+        print()
     else:
         print("Error: el número válido es entre 1 y 50.\n")
 
